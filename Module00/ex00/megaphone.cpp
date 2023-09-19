@@ -15,10 +15,7 @@ int main(int ac, char *av[])
                 std::cout << ch;
         }
     }
-    
-    
 
-    
     std::cout << std::endl;
     return (0);
 }
