@@ -17,12 +17,13 @@ int main() {
         }
         else if (command == "ADD") {
             contacts[count] = get_info();
+            count++;
         }
         else if (command == "SEARCH") {
             search(contacts, count);
         }
         else {
-            std::cout << "Invalid input";
+            std::cout << "Invalid input" << std::endl;
         }
     }
 }
