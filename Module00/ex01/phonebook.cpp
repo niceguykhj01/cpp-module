@@ -5,7 +5,7 @@ int main() {
     Contact * contacts = new Contact[8];
     int count = 0;
 
-    while (count < 8) {
+    while (count < 9) {
         std::string command;
 
         std::cout << "Enter a command: ";
@@ -16,8 +16,13 @@ int main() {
             return (0);
         }
         else if (command == "ADD") {
-            contacts[count] = get_info();
-            count++;
+            if (count == 8) {
+                std::cout << "Maximum of 8 contacts allowed!" << std::endl;
+            }
+            else {
+                contacts[count] = get_info();
+                count++;
+            }
         }
         else if (command == "SEARCH") {
             search(contacts, count);

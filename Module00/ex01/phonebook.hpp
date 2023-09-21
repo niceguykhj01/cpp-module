@@ -1,10 +1,9 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include <iostream>
 #include <string>
-#include <cctype>
-#include <cstring>
+#include <iomanip>
+#include <iostream>
 
 class Contact {
     public:
@@ -24,5 +23,6 @@ class Contact {
 
 Contact get_info();
 void search(Contact*, int);
+std::string truncate(std::string);
 
 #endif

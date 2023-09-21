@@ -1,5 +1,7 @@
 #include "phonebook.hpp"
 
+
+
 Contact get_info() {
     Contact temp;
     std::cout << "Enter first name: ";
@@ -28,11 +30,26 @@ Contact get_info() {
     return (temp);
 }
 
+std::string truncate(std::string str) {
+    if (str.size() > 10) {
+        str = str.substr(0, 9);
+        str += '.';
+    }
+    return str;
+}
 void search(Contact* contacts, int count) {
+
+    std::cout << std::setw(10) << "index" <<'|';
+    std::cout << std::setw(10) << "first name" <<'|';
+    std::cout << std::setw(10) << "last name" <<'|';
+    std::cout << std::setw(10) << "nickname" << std::endl;
 
     for (int i = 0; i < count; i++) {
         Contact temp = contacts[i];
-        std::cout << i << temp.first_name << temp.last_name << temp.nickname << std::endl;
+        std::cout << std::setw(10) << i <<'|';
+        std::cout << std::setw(10) << truncate(temp.first_name) <<'|';
+        std::cout << std::setw(10) << truncate(temp.last_name) <<'|';
+        std::cout << std::setw(10) << truncate(temp.nickname) << std::endl;
     }
     
     if (0 < count) {
