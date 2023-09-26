@@ -56,8 +56,8 @@ void search(Contact* contacts, int count) {
         int index;
         std::cout << "Enter index: ";
         std::cin >> index;
-        
-        if (0 <= index && index < count) {
+
+        if (0 <= index && index < count && isdigit(index)) {
             Contact temp1 = contacts[index];
             std::cout << std::endl;
             std::cout << "first name: " << temp1.first_name << std::endl;
