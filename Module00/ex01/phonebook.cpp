@@ -10,6 +10,7 @@ int main() {
 
         std::cout << "Enter a command: ";
         std::cin >> command;
+        std::cin.ignore(1,'\n');
 
         if (command == "EXIT") {
             delete[] contacts;
