@@ -6,7 +6,7 @@ int main() {
     int count = 0;
     std::string command;
 
-    while (count < 9) {
+    while (!std::cin.eof() && count < 9) {
     
         std::cout << "Enter a command: ";
         std::cin >> command;
@@ -21,7 +21,7 @@ int main() {
                 std::cout << "Maximum of 8 contacts allowed!" << std::endl;
             }
             else {
-                contacts[count] = get_info();
+                contacts[count].init();
                 count++;
             }
         }
