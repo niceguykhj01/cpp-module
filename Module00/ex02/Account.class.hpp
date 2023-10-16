@@ -19,8 +19,11 @@ class Account {
     public:
         typedef Account t;
 
-        void displayAccountsInfos()
-        void displayStatus()
+        Account(int initial);
+
+        void makeDeposit();
+        void displayAccountsInfos();
+        void displayStatus();
 
 }
 
