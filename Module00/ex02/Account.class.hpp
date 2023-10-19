@@ -1,30 +1,28 @@
-#ifndef ACCOUNTS.CLASS_HPP
-#define ACCOUNTS.CLASS_HPP
-
 class Account {
     private:
-        static int _totAccount
-        static int _totAmount
-        static int _totNbDeposit
-        static int _totNbWithdrawal
+        static int _totAccount;
+        static int _totAmount;
+        static int _totNbDeposit;
+        static int _totNbWithdrawal;
 
-        int _index
-        int _amount
-        int _deposit
-        int _withdrawal
-        int _nbDeposits
-        int _nbWithdrawals
+        int _index;
+        int _amount;
+        int _nbDeposits;
+        int _nbWithdrawals;
 
 
     public:
         typedef Account t;
 
         Account(int initial);
-
-        void makeDeposit();
-        void displayAccountsInfos();
+        ~Account();
+        
+        void makeDeposit(int depAmount);
+        void makeWithdrawal(int withAmount);
         void displayStatus();
+        
+        static void displayAccountsInfos();
 
-}
+};
 
-#endif
+void printTime();
