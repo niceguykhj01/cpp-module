@@ -1,4 +1,4 @@
-NAME = Sed_is_for_losers
+NAME = replace
 
 CC = clang++
 CFLAGS = -std=c++03 -Wall -Wextra -Werror
