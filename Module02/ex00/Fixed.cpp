@@ -11,6 +11,11 @@ Fixed::Fixed(Fixed &other) {
     
 }
 
+void Fixed::operator=(const Fixed &other) {
+    std::cout << "Assignation operator called" << std::endl;
+    fpv = other.Fixed::getRawBits();
+}
+
 int Fixed::getRawBits() const {
     std::cout << "getRawBits member function called" << std::endl;
     return this -> fpv;

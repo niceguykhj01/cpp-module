@@ -8,10 +8,7 @@ class Fixed {
         Fixed();
         ~Fixed();
         Fixed(Fixed &other);
-        void operator=(const Fixed &other) {
-            std::cout << "Assignation operator called" << std::endl;
-            fpv = other.Fixed::getRawBits();
-        };
+        void operator=(const Fixed &other);
         int getRawBits( void ) const;
         void setRawBits( int const raw );
 
