@@ -2,8 +2,8 @@
 
 FragTrap::FragTrap(std::string const &name) : ClapTrap(name) {
     hitpoints = 100;
-    energy = 50;
-    damage = 20;
+    energy = 100;
+    damage = 30;
     std::cout << "FragTrap " << name << " has spawned!" << std::endl;
 }
 
