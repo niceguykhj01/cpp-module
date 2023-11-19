@@ -15,8 +15,8 @@ int main()
     j->makeSound();
     meta->makeSound();
 
-    delete j;
-    delete i;
+    delete (Dog*)j;
+    delete (Cat*)i;
 
     return 0;
 }
