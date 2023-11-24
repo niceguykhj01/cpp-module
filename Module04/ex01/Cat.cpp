@@ -1,8 +1,7 @@
 #include "Cat.hpp"
 
-Cat::Cat() {
+Cat::Cat() : Animal("Cat") {
     std::cout << "Default Cat constructor called" << std::endl;
-    this->Animal::type = "Cat";
     brain = new Brain();
 }
 
@@ -19,8 +18,8 @@ void Cat::operator=(const Cat &other) {
     this->brain = other.brain;
 }
 
-void Cat::makeSound() {
-    this->Animal::makeSound();
+void Cat::makeSound() const{
+    std::cout << "meow" << std::endl;
 }
 
 Cat::~Cat() {

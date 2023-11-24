@@ -6,25 +6,20 @@ Animal::Animal() {
     std::cout << "Default Animal constructor called" << std::endl;
 }
 
+Animal::Animal(std::string type) {
+    std::cout << "Default Animal constructor called with type " << type << std::endl;
+    this->type = type;
+}
+
 std::string Animal::getType() const{
     return this->type;
 }
 
 void Animal::makeSound() const{
-    if (this->type == "Dog") {
-        std::cout << "Woof" << std::endl;
-    }
-    else if (this->type == "Cat") {
-        std::cout << "Meow" << std::endl;
-    }
+    
 }
 
 Animal::~Animal() {
-    // std::cout << "Animal Destructor called" << std::endl;
-    // if(this->type == "Cat") {
-    //     delete(Cat*)this;
-    // }
-    // else if(this->type == "Dog") {
-    //     delete(Dog*)this;
-    // }
+    std::cout << "Animal Destructor called" << std::endl;
+
 }
