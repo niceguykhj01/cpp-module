@@ -1,6 +1,5 @@
 #include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
+
 
 Animal::Animal() {
     std::cout << "Default Animal constructor called" << std::endl;
