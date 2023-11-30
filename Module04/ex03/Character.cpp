@@ -5,12 +5,19 @@ Character::Character(std::string name) {
     this->name = name;
 }
 
+Character::Character(Character &other) {
+    *this = other;
+}
+
 Character::~Character() {
+    std::cout << "Character destructor called for " << name << std::endl;
     for(int i = 0; i < 4; i++) {
         if (this->inventory[i] != NULL) {
+            std::cout << this->inventory[i] << std::endl;
             delete this->inventory[i];
         }
     }
+    
 }
 
 std::string const &Character::getName() const {
@@ -37,7 +44,7 @@ void Character::unequip(int idx) {
 void Character::use(int idx, ICharacter& target) {
     if (idx >= 0 && idx < 4) {
         if (inventory[idx] != NULL) {
-            inventory[idx]->AMateria::use(target);
+            inventory[idx]->use(target);
         }
     }
     
